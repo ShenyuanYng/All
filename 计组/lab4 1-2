@@ -1,0 +1,20 @@
+.data 
+di: .word 0x12345678
+.text
+main:
+la t0,di
+lw a0,(t0)
+li a7,34
+ecall
+lb t1,(t0)
+lb t2,1(t0)
+lb t3,2(t0)
+lb t4,3(t0)
+sb t1,3(t0)
+sb t2,2(t0)
+sb t3,1(t0)
+sb t4,(t0)
+add a0,t0,x0
+ecall
+li a7,10 #to exit
+ecall

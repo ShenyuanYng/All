@@ -1,0 +1,21 @@
+.data 
+str: .ascii "Welcome " 
+sid: .space 9
+e1: .asciz "to RISC-V World"
+
+.text
+li a7,8 #get a string
+la a0,sid
+li a1,9
+ecall
+
+
+li t0,32 #replace ¡®\0¡¯ with space
+sb t0,8(a0)
+li a7,4 #print a string
+la a0,str
+ecall
+
+
+li a7,10 #exit
+ecall

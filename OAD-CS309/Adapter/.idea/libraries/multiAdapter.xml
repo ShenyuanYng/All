@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="multiAdapter">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Multiple_Adaptees/out/production/Multiple_Adaptees/multiAdapter/jsoup-1.7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Multiple_Adaptees/out/production/Multiple_Adaptees/multiAdapter/fastjson-1.2.79.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

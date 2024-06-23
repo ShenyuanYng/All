@@ -1,0 +1,54 @@
+.data
+  op :.asciiz "*"
+  eq:.asciiz "="
+  line:.asciiz "\n"
+  space:.asciiz " "
+.text
+  j main
+  print:
+    move $a0,$t1
+    li $v0,1
+    syscall
+    
+    la $a0,op
+    li $v0,4
+    syscall
+    
+    move $a0,$t2
+    li $v0,1
+    syscall
+    
+    la $a0,eq
+    li $v0,4
+    syscall
+    
+    mult $t1,$t2
+    mflo $a0
+    li $v0,1
+    syscall
+    
+    la $a0,space
+    li $v0,4 
+    syscall
+    
+    blt $t2,$t1,ret
+    la $a0,line
+    syscall
+    
+    ret:
+    jr $ra
+  main:
+    li $t1,0
+    for1:
+      addi $t1,$t1,1
+      bgt $t1,9,for1_out
+      li $t2,0
+      for2:
+        addi $t2,$t2,1
+        bgt $t2,$t1,for1
+        jal print+
+        j for2
+      j for1
+    for1_out:
+      li $v0,10
+      syscall

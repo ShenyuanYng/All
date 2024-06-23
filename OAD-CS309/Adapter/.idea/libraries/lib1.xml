@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Adapter/lib/fastjson-1.2.79.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Adapter/lib/jsoup-1.7.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
